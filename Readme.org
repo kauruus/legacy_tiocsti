@@ -29,5 +29,4 @@ Since Linux Kernel 6.2, ~TIOCSTI~ is disabled by default.
 
 And there is [[https://lore.kernel.org/lkml/CAFqZXNt84oqHo5aQQbjuroA6fGzMyso9HuN4fz3u1mygze2Yrw@mail.gmail.com/T/][a bug]] that prevents me to re-enable it with sysctl.
 
-So before the patch is merged, I use this hack to re-enable it.
-
+So before +the patch is merged+ next kernel release, I use this hack to re-enable it.
