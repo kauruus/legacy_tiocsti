@@ -13,14 +13,21 @@ make
 sudo insmod legacy_tiocsti.ko
 #+end_src
 
-to disable TIOCSTI, simply ~sudo rnmod legacy_tiocsti~.
+to disable ~TIOCSTI~, simply ~sudo rnmod legacy_tiocsti~.
+
+* Security concern
+
+~CONFIG_LEGACY_TIOCSTI~ exists for a reason. Enabling ~TIOCSTI~ poses a potential **security risk**.
+
+Use this at your own risk.
 
 * Why?
 
-I'm a [[https://github.com/cantino/mcfly][mcfly]] user, it needs TIOCSTI to work with bash.
+I'm a [[https://github.com/cantino/mcfly][mcfly]] user, it needs ~TIOCSTI~ to work with bash.
 
-Since Linux Kernel 6.2, TIOCSTI is disabled by default.
+Since Linux Kernel 6.2, ~TIOCSTI~ is disabled by default.
 
-And there is [[https://lore.kernel.org/lkml/CAFqZXNt84oqHo5aQQbjuroA6fGzMyso9HuN4fz3u1mygze2Yrw@mail.gmail.com/T/][a bug]] that prevents me to re-enable it.
+And there is [[https://lore.kernel.org/lkml/CAFqZXNt84oqHo5aQQbjuroA6fGzMyso9HuN4fz3u1mygze2Yrw@mail.gmail.com/T/][a bug]] that prevents me to re-enable it with sysctl.
 
 So before the patch is merged, I use this hack to re-enable it.
+
