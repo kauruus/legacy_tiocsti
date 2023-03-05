@@ -1,0 +1,26 @@
+#+title: Legacy TIOCSTI
+
+Enable TIOCSTI through a kernel module.
+
+** How to use
+
+clone the repo, build and insmod.
+
+#+begin_src
+git clone https://github.com/kauruus/legacy_tiocsti.git
+cd legacy_tiocsti
+make
+sudo insmod legacy_tiocsti.ko
+#+end_src
+
+to disable TIOCSTI, simply ~sudo rnmod legacy_tiocsti~.
+
+* Why?
+
+I'm a [[https://github.com/cantino/mcfly][mcfly]] user, it needs TIOCSTI to work with bash.
+
+Since Linux Kernel 6.2, TIOCSTI is disabled by default.
+
+And there is [[https://lore.kernel.org/lkml/CAFqZXNt84oqHo5aQQbjuroA6fGzMyso9HuN4fz3u1mygze2Yrw@mail.gmail.com/T/][a bug]] that prevents me to re-enable it.
+
+So before the patch is merged, I use this hack to re-enable it.
