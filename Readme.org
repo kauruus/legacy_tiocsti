@@ -1,4 +1,4 @@
-#+title: Legacy TIOCSTI
+#+title: NO LONGER NEEDED. THE KERNEL BUG HAS BEEN FIXED.
 
 Enable TIOCSTI through a kernel module.
 
@@ -25,7 +25,7 @@ Use this at your own risk.
 
 I'm a [[https://github.com/cantino/mcfly][mcfly]] user, it needs ~TIOCSTI~ to work with bash.
 
-Since Linux Kernel 6.2, ~TIOCSTI~ is disabled by default.
+For some Linux distributions, ~TIOCSTI~ is disabled by default.
 
 And there is [[https://lore.kernel.org/lkml/CAFqZXNt84oqHo5aQQbjuroA6fGzMyso9HuN4fz3u1mygze2Yrw@mail.gmail.com/T/][a bug]] that prevents me to re-enable it with sysctl.
 
